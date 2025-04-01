@@ -1,0 +1,328 @@
+/* Reinicio de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+}
+
+/* Fondo y color de la página */
+body {
+    background-color: #e1f5fe; /* Azul muy claro */
+    color: #333; /* Texto oscuro para buen contraste */
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Evita que la página se desborde horizontalmente */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: rgb(10, 116, 218); /* Azul claro */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    animation: fadeInDown 1s ease-out; /* Animación de aparición */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: slideIn 1s ease-out; /* Animación de deslizamiento */
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    transform: translateY(-5px);
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* Sección de presentación */
+#presentacion {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    animation: fadeInLeft 1s ease-out; /* Animación de desvanecimiento */
+}
+
+#presentacion h2 {
+    font-size: 2rem;
+    color: rgb(10, 116, 218);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s; /* FadeIn animado */
+}
+
+#presentacion article p {
+    font-size: 1.1rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s; /* FadeIn animado */
+}
+
+/* Sección de Objetivo */
+#objetivo {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    animation: fadeInRight 1s ease-out; /* Animación de desvanecimiento */
+}
+
+#objetivo h2 {
+    font-size: 2rem;
+    color: rgb(10, 116, 218);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s; /* FadeIn animado */
+}
+
+#objetivo p {
+    font-size: 1.1rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s; /* FadeIn animado */
+}
+
+/* Sección de Hoja de Vida */
+#hoja-vida {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-out; /* Animación de desvanecimiento */
+}
+
+#hoja-vida h2 {
+    font-size: 2rem;
+    color: rgb(10, 116, 218);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s; /* FadeIn animado */
+}
+
+#hoja-vida h3 {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    color: rgb(10, 116, 218);
+}
+
+#hoja-vida p,
+#hoja-vida ul {
+    margin-bottom: 10px;
+}
+
+#hoja-vida ul {
+    list-style-type: none;
+}
+
+#hoja-vida ul li {
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s; /* FadeIn animado */
+}
+
+/* Foto de perfil */
+.perfil-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid rgb(10, 116, 218); /* Borde para destacar la foto */
+    animation: rotateIn 1s ease-in-out; /* Animación de rotación */
+}
+
+/* Pie de página */
+footer {
+    background-color: rgb(10, 116, 218); /* Azul claro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    animation: fadeInUp 1s ease-out; /* Animación de desvanecimiento */
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Enlaces dentro del pie de página */
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Color de enlace al pasar el cursor */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .perfil-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto-perfil {
+        margin-bottom: 15px;
+    }
+
+    /* Sección principal */
+    #presentacion, #objetivo, #hoja-vida {
+        padding: 20px;
+    }
+}

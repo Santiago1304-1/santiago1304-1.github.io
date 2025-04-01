@@ -1,0 +1,251 @@
+/* Reinicio de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+}
+
+/* Fondo y color de la página */
+body {
+    background-color: #f5f5f5; /* Color de fondo suave */
+    color: #333; /* Texto oscuro para buen contraste */
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Evita que la página se desborde horizontalmente */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #0a74da; /* Color de fondo atractivo */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    animation: fadeInDown 1s ease-out; /* Animación de aparición */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: slideIn 1s ease-out; /* Animación de deslizamiento */
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    transform: translateY(-5px);
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* Sección principal de contenido */
+main {
+    padding: 40px;
+}
+
+/* Estilos del índice */
+#indice {
+    margin-bottom: 40px;
+}
+
+#indice h2 {
+    font-size: 2rem;
+    color: #0a74da;
+    margin-bottom: 20px;
+}
+
+#indice ul {
+    list-style: none;
+    padding: 0;
+}
+
+#indice ul li {
+    margin-bottom: 10px;
+}
+
+#indice ul li a {
+    text-decoration: none;
+    color: #0a74da;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+#indice ul li a:hover {
+    color: #ffcc00; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilo para las secciones de contenido */
+section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-out; /* Animación de desvanecimiento */
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #0a74da;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s; /* FadeIn animado */
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s; /* FadeIn animado */
+}
+
+/* Pie de página */
+footer {
+    background-color: #0a74da;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    animation: fadeInUp 1s ease-out; /* Animación de desvanecimiento */
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Enlaces dentro del pie de página */
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Color de enlace al pasar el cursor */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    /* Sección principal */
+    section {
+        padding: 20px;
+    }
+}
